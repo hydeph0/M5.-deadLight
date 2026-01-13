@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>M5. deadLight</title>
+    <style>
+        body { background: #111; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; font-family: sans-serif; }
+        canvas { border: 2px solid #333; background: black; cursor: crosshair; display: block; }
+        video { display: none; } /* Strictly hide video elements */
+        
+        #overlay {
+            position: absolute; width: 600px; height: 750px;
+            background: rgba(0,0,0,0.9); color: white;
+            display: flex; flex-direction: column; justify-content: center;
+            align-items: center; z-index: 10; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="overlay">
+        <h1>M5. deadLight</h1>
+        <p>Click to Initialize Systems</p>
+    </div>
+
+    <video id="titleVideo" src="title_screen_v1.mp4" loop playsinline></video>
+    <video id="winVideo" src="you won_v1.mp4" muted playsinline></video>
+    
+    <canvas id="gameCanvas" width="600" height="750"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
