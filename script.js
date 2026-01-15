@@ -426,7 +426,7 @@ class Game {
                 this.ctx.fillStyle = "yellow";
                 this.ctx.textAlign = "center";
                 this.ctx.font = "bold 40px 'Courier New'";
-                this.ctx.fillText("LEVEL CLEARED!", SCREEN_WIDTH/2, 360);
+                this.ctx.fillText("LEVEL CLEARED.. sorta!", SCREEN_WIDTH/2, 360);
             }
 
             this.ctx.fillStyle = "darkred"; this.ctx.fillRect(SCREEN_WIDTH - 120, 10, 110, 30);
