@@ -422,11 +422,21 @@ class Game {
 
             if (this.state === "LEVEL_CLEAR") {
                 this.ctx.fillStyle = "rgba(0,0,0,0.6)";
-                this.ctx.fillRect(0, 300, SCREEN_WIDTH, 100);
+                this.ctx.fillRect(0, 250, SCREEN_WIDTH, 150);
                 this.ctx.fillStyle = "yellow";
                 this.ctx.textAlign = "center";
-                this.ctx.font = "bold 40px 'Courier New'";
-                this.ctx.fillText("LEVEL CLEARED.. sorta!", SCREEN_WIDTH/2, 360);
+                this.ctx.font = "bold 25px 'Courier New'";
+                
+                let clearMessage = "";
+                if (this.current_level === 1) {
+                    clearMessage = "LEVEL CLEARED.. sorta, you're not modding are you?";
+                } else if (this.current_level === 2) {
+                    clearMessage = "LEVEL CLEARED... bro, you didn't clear shit";
+                } else if (this.current_level === 3) {
+                    clearMessage = "LEVEL CLEARED ..reported";
+                }
+                
+                this.ctx.fillText(clearMessage, SCREEN_WIDTH/2, 330);
             }
 
             this.ctx.fillStyle = "darkred"; this.ctx.fillRect(SCREEN_WIDTH - 120, 10, 110, 30);
